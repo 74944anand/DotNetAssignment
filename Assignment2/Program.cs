@@ -12,11 +12,22 @@ namespace Assignment1
         {
 
 
-            Employee o1 = new Employee(1, "Amol", 123465, 10);
-            Employee o2 = new Employee(1, "Amol", 123465);
-            Employee o3 = new Employee(1, "Amol");
-            Employee o4 = new Employee(1);
-            Employee o5 = new Employee();
+            //Employee o1 = new Employee(1, "Amol", 123465, 10);
+            //Employee o2 = new Employee(1, "Amol", 123465);
+            //Employee o3 = new Employee(1, "Amol");
+            //Employee o4 = new Employee(1);
+            //Employee o5 = new Employee();
+
+            Employee o1 = new Employee();
+            Employee o2 = new Employee();
+            Employee o3 = new Employee();
+
+            Console.WriteLine(o1.EmployeeNo);
+            Console.WriteLine(o2.EmployeeNo);
+            Console.WriteLine(o3.EmployeeNo);
+            Console.WriteLine(o1.GetNetSalary());
+
+
             Console.ReadLine();
 
 
@@ -25,43 +36,44 @@ namespace Assignment1
 
     public class Employee
     {
+        private static int autoIncremented=1;
         private int empNo;
         private string name;
         private decimal Basic;
         private short DeptNo;
 
 
-        public Employee(int empNo, string name, decimal basic, short deptNo)
-        {
-            this.empNo = empNo;
-            this.name = name;
-            Basic = basic;
-            DeptNo = deptNo;
-        }
-        public Employee(int empNo, string name, decimal basic)
-        {
-            this.empNo = empNo;
-            this.name = name;
-            Basic = basic;
-            DeptNo = 10;
-        }
-        public Employee(int empNo, string name)
-        {
-            this.empNo = empNo;
-            this.name = name;
-            Basic = 123465;
-            DeptNo = 10;
-        }
-        public Employee(int empNo)
-        {
-            this.empNo = empNo;
-            this.name = "Amol";
-            Basic = 123465;
-            DeptNo = 10;
-        }
+        //public Employee(int empNo, string name, decimal basic, short deptNo)
+        //{
+        //    this.empNo = empNo;
+        //    this.name = name;
+        //    Basic = basic;
+        //    DeptNo = deptNo;
+        //}
+        //public Employee(int empNo, string name, decimal basic)
+        //{
+        //    this.empNo = empNo;
+        //    this.name = name;
+        //    Basic = basic;
+        //    DeptNo = 10;
+        //}
+        //public Employee(int empNo, string name)
+        //{
+        //    this.empNo = empNo;
+        //    this.name = name;
+        //    Basic = 123465;
+        //    DeptNo = 10;
+        //}
+        //public Employee(int empNo)
+        //{
+        //    this.empNo = empNo;
+        //    this.name = "Amol";
+        //    Basic = 123465;
+        //    DeptNo = 10;
+        //}
         public Employee()
         {
-            this.empNo = 1;
+            this.empNo = autoIncremented++;
             this.name = "Amol";
             Basic = 123465;
             DeptNo = 10;
@@ -69,8 +81,9 @@ namespace Assignment1
         public int EmployeeNo
         {
             get { return empNo; }
-            set {
-                if(value < 0)
+            set
+            {
+                if (value < 0)
                 {
                     empNo = value;
                 }
@@ -78,8 +91,8 @@ namespace Assignment1
                 {
                     Console.WriteLine("Invalid Employee No");
                 }
-            
-            }   
+
+            }
         }
         public string name1
         {
@@ -102,9 +115,9 @@ namespace Assignment1
             get { return Basic; }
             set
             {
-                if (value <10000 && value > 30000)
+                if (value < 10000 && value > 30000)
                 {
-                    Basic= value;
+                    Basic = value;
                 }
                 else
                 {
@@ -136,3 +149,4 @@ namespace Assignment1
         }
     }
 }
+
