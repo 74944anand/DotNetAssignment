@@ -1,0 +1,7 @@
+C:\Users\dac\Desktop\.NET\labAssignment\bin\Debug\labAssignment.exe.config
+C:\Users\dac\Desktop\.NET\labAssignment\bin\Debug\labAssignment.exe
+C:\Users\dac\Desktop\.NET\labAssignment\bin\Debug\labAssignment.pdb
+C:\Users\dac\Desktop\.NET\labAssignment\obj\Debug\labAssignment.csproj.AssemblyReference.cache
+C:\Users\dac\Desktop\.NET\labAssignment\obj\Debug\labAssignment.csproj.CoreCompileInputs.cache
+C:\Users\dac\Desktop\.NET\labAssignment\obj\Debug\labAssignment.exe
+C:\Users\dac\Desktop\.NET\labAssignment\obj\Debug\labAssignment.pdb
